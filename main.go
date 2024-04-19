@@ -4,7 +4,7 @@ package main
 import (
 	"log"
 
-	"github.com/Joelle-Bailey/github-action/microservice"
+	"microservice"
 )
 
 func main() {
