@@ -3,7 +3,7 @@ WORKDIR /src
 COPY go.mod .
 RUN go mod download
 COPY main.go .
-ADD microservice ./microservice
+ADD microservice microservice
 RUN CGO_ENABLED=0 go build -o /helloserver
 FROM alpine
 COPY --from=build /helloserver /helloserver
