@@ -3,7 +3,8 @@ package main
 
 import (
 	"log"
-	"microservice"
+
+	"microservice/microservice"
 )
 
 func main() {

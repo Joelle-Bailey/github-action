@@ -1,5 +1,5 @@
 FROM golang:1.15-alpine AS build
-WORKDIR /src/
+WORKDIR /src
 COPY go.mod .
 RUN go mod download
 COPY main.go .
