@@ -15,8 +15,9 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Test
+      - name: List
         run: ls
+      - name: Test
         run: go test ./microservice
 
   docker:
