@@ -18,7 +18,7 @@ jobs:
       - name: List
         run: ls
       - name: Test
-        run: go test /microservice
+        run: go test microservice
 
   docker:
     needs: test
