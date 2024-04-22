@@ -32,6 +32,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: Joelle-Bailey/helloserver:latest
+          tags: joelleb/helloserver:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
