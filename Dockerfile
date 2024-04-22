@@ -5,6 +5,10 @@ RUN go mod download
 COPY main.go .
 ADD microservice ./microservice
 RUN CGO_ENABLED=0 go build -o /bin/helloserver
-FROM scratch
+FROM alpine
 COPY --from=build /bin/helloserver /bin/helloserver
+
+# Set permissions for the executable
+RUN chmod +x /bin/helloserver
+
 ENTRYPOINT ["/bin/helloserver"]

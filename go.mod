@@ -1,3 +1,3 @@
-module github.com/Joelle-Bailey/github-action
+module ./microservice
 
 go 1.21
