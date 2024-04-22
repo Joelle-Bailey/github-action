@@ -1,8 +1,11 @@
 FROM golang:1.15-alpine AS build
-WORKDIR /src
-COPY go.mod .
-RUN go mod download
-COPY main.go .
+WORKDIR /src/
+COPY server.go /src/
+RUN go mod init gitlab.com/Joelle-Bailey/github-action
+RUN go mod tidy
+#COPY go.mod .
+#RUN go mod download
+#COPY main.go .
 ADD microservice ./microservice
 RUN CGO_ENABLED=0 go build -o /bin/helloserver
 FROM alpine
